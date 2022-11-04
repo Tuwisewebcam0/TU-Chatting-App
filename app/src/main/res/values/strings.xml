@@ -2,4 +2,7 @@
     <string name="app_name">TU Chatting App</string>
     <string name="tu_chatting_app_will_send_otp_to_your_entered_number">TU Chatting App Will Send OTP To Your Entered Number</string>
     <string name="enter_your_phone_number_here">Enter Your Phone Number here</string>
+    <string name="enter_the_otp_here">Enter the OTP here....</string>
+    <string name="didn_t_receive_change_your_number">Didn\'t Receive? Change Your number</string>
+    <string name="verify_otp">Verify OTP</string>
 </resources>

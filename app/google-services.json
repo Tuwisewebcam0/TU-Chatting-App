@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "895560054353",
+    "project_id": "tuchattingapp",
+    "storage_bucket": "tuchattingapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895560054353:android:41fb0342f7d131867b2a70",
+        "android_client_info": {
+          "package_name": "com.example.tuchattingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "895560054353-e45h43822hm1dbvedho1gmnc3o3i5ijv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tuchattingapp",
+            "certificate_hash": "ce708d6de145270204361b0cce97d6125c30b8e2"
+          }
+        },
+        {
+          "client_id": "895560054353-5tqa1g3tetq2j4uevbnuetfakhsdr100.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMPQk66Dct5IJ6kZqKotYUcrlARQOe-t0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "895560054353-5tqa1g3tetq2j4uevbnuetfakhsdr100.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
