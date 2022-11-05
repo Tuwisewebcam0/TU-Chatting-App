@@ -60,17 +60,18 @@
     </com.hbb20.CountryCodePicker>
 
     <EditText
+        android:id="@+id/getphonenumber"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_below="@+id/centerhorizontalline"
         android:layout_marginLeft="70dp"
-        android:layout_marginRight="70dp"
-        android:id="@+id/getphonenumber"
-        android:hint="@string/enter_your_phone_number_here"
-        android:textAlignment="center"
-        android:inputType="number"
-        android:textColor="@color/black"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/centerhorizontalline">
+        android:layout_marginRight="70dp"
+        android:hint="@string/enter_your_phone_number_here"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black">
 
     </EditText>
 
