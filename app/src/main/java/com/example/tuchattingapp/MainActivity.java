@@ -49,12 +49,7 @@ public class MainActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
 
         countrycode = mcountrycodepicker.getSelectedCountryCodeWithPlus();
-        mcountrycodepicker.setOnCountryChangeListener(new CountryCodePicker.OnCountryChangeListener() {
-            @Override
-            public void onCountrySelected() {
-                countrycode = mcountrycodepicker.getSelectedCountryCodeWithPlus();
-            }
-        });
+        mcountrycodepicker.setOnCountryChangeListener(() -> countrycode = mcountrycodepicker.getSelectedCountryCodeWithPlus());
 
         msendotp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -131,13 +126,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
-
-
-
-
-
-
 
 
 
