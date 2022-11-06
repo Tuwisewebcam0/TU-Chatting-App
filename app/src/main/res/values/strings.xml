@@ -5,4 +5,5 @@
     <string name="enter_the_otp_here">Enter the OTP here....</string>
     <string name="didn_t_receive_change_your_number">Didn\'t Receive? Change Your number</string>
     <string name="verify_otp">Verify OTP</string>
+    <string name="enter_your_name_here">Enter Your Name here</string>
 </resources>

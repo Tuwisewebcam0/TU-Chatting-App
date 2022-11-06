@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".SetProfile">
+    tools:context=".setProfile">
 
     <TextView
         android:layout_width="wrap_content"
@@ -14,9 +14,10 @@
         android:text="Save Your Profile"
         android:layout_above="@+id/getuserimage"
         android:layout_marginBottom="30dp"
-        android:textColor="#25d366"
+        android:textColor="#14502B"
         android:textStyle="bold"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        tools:ignore="HardcodedText">
 
     </TextView>
 
@@ -26,15 +27,17 @@
         android:layout_height="130dp"
         android:layout_above="@+id/getusername"
         android:layout_marginBottom="20dp"
-        android:layout_marginLeft="80dp"
+        android:layout_marginStart="80dp"
         android:id="@+id/getuserimage"
         android:layout_centerHorizontal="true"
         app:cardCornerRadius="130dp">
 
         <ImageView
+            android:contentDescription="ImageRequest"
+            android:name="READ_EXTERNAL_STORAGE"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/ic_launcher_background"
+            android:src="@drawable/profile_pic_avatar"
             android:id="@+id/getuserimageviewinimageview"
             android:scaleType="centerCrop">
 
@@ -45,14 +48,15 @@
 
 
     <EditText
+        android:id="@+id/getusername"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:inputType="textCapWords"
-        android:hint="Enter Your Name here"
         android:layout_centerInParent="true"
-        android:id="@+id/getusername"
         android:layout_marginLeft="70dp"
-        android:layout_marginRight="70dp">
+        android:layout_marginRight="70dp"
+        android:autofillHints="name"
+        android:hint="@string/enter_your_name_here"
+        android:inputType="textCapWords">
 
     </EditText>
 
@@ -65,7 +69,7 @@
         android:textColor="@color/white"
         android:text="Save Profile"
         android:layout_marginTop="20dp"
-        android:background="#25d366">
+        android:background="#1A3E1B">
 
     </android.widget.Button>
 

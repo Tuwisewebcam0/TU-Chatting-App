@@ -20,17 +20,13 @@ public class Splashscreen extends AppCompatActivity {
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
+        new Handler().postDelayed(() -> {
 
-                Intent intent=new Intent(Splashscreen.this,MainActivity.class);
-                startActivity(intent);
-                finish();
+            Intent intent=new Intent(Splashscreen.this,MainActivity.class);
+            startActivity(intent);
+            finish();
 
-            }
         },SPLASH_TIMER);
-
 
 
     }
