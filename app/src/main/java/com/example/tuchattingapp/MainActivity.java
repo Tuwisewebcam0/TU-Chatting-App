@@ -51,37 +51,35 @@ public class MainActivity extends AppCompatActivity {
         countrycode = mcountrycodepicker.getSelectedCountryCodeWithPlus();
         mcountrycodepicker.setOnCountryChangeListener(() -> countrycode = mcountrycodepicker.getSelectedCountryCodeWithPlus());
 
-        msendotp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String number;
-                number = mgetphonenumber.getText().toString();
-                if (number.isEmpty()) {
-                    Toast.makeText(getApplicationContext(), "Please Enter Your number", Toast.LENGTH_SHORT).show();
-                } else if (number.length() < 10) {
-                    Toast.makeText(getApplicationContext(), "Please Enter correct number", Toast.LENGTH_SHORT).show();
-                }
-                else
-                {
+        msendotp.setOnClickListener(view -> {
+            String number;
+            number = mgetphonenumber.getText().toString();
+            if (number.isEmpty()) {
+                Toast.makeText(getApplicationContext(), "Please Enter Your number", Toast.LENGTH_SHORT).show();
+            } else if (number.length() < 10) {
+                Toast.makeText(getApplicationContext(), "Please Enter correct number", Toast.LENGTH_SHORT).show();
+            }
+            else
+            {
 
-                    mprogressbarofmain.setVisibility(View.VISIBLE);
-                    phonenumber=countrycode+number;
+                mprogressbarofmain.setVisibility(View.VISIBLE);
+                phonenumber=countrycode+number;
 
-                    PhoneAuthOptions options=PhoneAuthOptions.newBuilder(firebaseAuth)
-                            .setPhoneNumber(phonenumber)
-                            .setTimeout(120L, TimeUnit.SECONDS)
-                            .setCallbacks(mcallbacks)
-                            .build();
-
-
-                    PhoneAuthProvider.verifyPhoneNumber(options);
+                PhoneAuthOptions options=PhoneAuthOptions.newBuilder(firebaseAuth)
+                        .setPhoneNumber(phonenumber)                    //phone number to verify
+                        .setTimeout(60L, TimeUnit.SECONDS)      //Timeout and unit
+                        .setActivity(MainActivity.this)                //Activity(for callback binding)
+                        .setCallbacks(mcallbacks)                      //onVerificationStateChangedCallbacks
+                        .build();
 
 
+                PhoneAuthProvider.verifyPhoneNumber(options);
 
-                }
 
 
             }
+
+
         });
 
 

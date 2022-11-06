@@ -33,13 +33,14 @@
         app:cardCornerRadius="130dp">
 
         <ImageView
-            android:contentDescription="ImageRequest"
+            android:id="@+id/getuserimageviewinimageview"
             android:name="READ_EXTERNAL_STORAGE"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:contentDescription="@string/imagerequest"
+            android:scaleType="centerCrop"
             android:src="@drawable/profile_pic_avatar"
-            android:id="@+id/getuserimageviewinimageview"
-            android:scaleType="centerCrop">
+            tools:ignore="ImageContrastCheck">
 
         </ImageView>
 
@@ -56,7 +57,8 @@
         android:layout_marginRight="70dp"
         android:autofillHints="name"
         android:hint="@string/enter_your_name_here"
-        android:inputType="textCapWords">
+        android:inputType="textCapWords"
+        android:textColorHint="#757575">
 
     </EditText>
 
@@ -67,7 +69,7 @@
         android:id="@+id/saveProfile"
         android:layout_centerHorizontal="true"
         android:textColor="@color/white"
-        android:text="Save Profile"
+        android:text="@string/save_profile"
         android:layout_marginTop="20dp"
         android:background="#1A3E1B">
 

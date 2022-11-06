@@ -6,4 +6,11 @@
     <string name="didn_t_receive_change_your_number">Didn\'t Receive? Change Your number</string>
     <string name="verify_otp">Verify OTP</string>
     <string name="enter_your_name_here">Enter Your Name here</string>
+    <string name="todo">TODO</string>
+    <string name="tu_chatting_app">TU Chatting App</string>
+    <string name="chats">Chats</string>
+    <string name="status">Status</string>
+    <string name="calls">Calls</string>
+    <string name="save_profile">Save Profile</string>
+    <string name="imagerequest">ImageRequest</string>
 </resources>
