@@ -126,7 +126,7 @@ public class setProfile extends AppCompatActivity {
 
         userprofile muserprofile = new userprofile(name, firebaseAuth.getUid());
         databaseReference.setValue(muserprofile);
-        Toast.makeText(getApplicationContext(), "User Profile Addded Successfully", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "User Profile Added Successfully", Toast.LENGTH_SHORT).show();
         sendImagetoStorage();
 
     }
