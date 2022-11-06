@@ -37,7 +37,6 @@
             android:name="READ_EXTERNAL_STORAGE"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:contentDescription="@string/imagerequest"
             android:scaleType="centerCrop"
             android:src="@drawable/profile_pic_avatar"
             tools:ignore="ImageContrastCheck">
@@ -69,7 +68,7 @@
         android:id="@+id/saveProfile"
         android:layout_centerHorizontal="true"
         android:textColor="@color/white"
-        android:text="@string/save_profile"
+        android:text="save_profile"
         android:layout_marginTop="20dp"
         android:background="#1A3E1B">
 

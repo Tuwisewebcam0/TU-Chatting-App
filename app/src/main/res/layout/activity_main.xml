@@ -85,11 +85,11 @@
         android:layout_below="@+id/getphonenumber"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:background="#25d366"
+        android:background="#2B6742"
         android:paddingLeft="40dp"
         android:paddingRight="40dp"
         android:text="Sent OTP"
-        android:textColor="#5D4037"
+        android:textColor="@color/white"
         android:textSize="15sp"
         tools:ignore="HardcodedText">
 

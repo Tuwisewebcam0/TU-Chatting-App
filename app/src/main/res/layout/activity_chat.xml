@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_marginTop="0dp"
-        android:background="#2A5550"
+        android:background="#E13A05"
         android:id="@+id/toolbar">
 
         <RelativeLayout
@@ -45,7 +45,7 @@
         app:tabTextColor="#77a3a7"
         app:tabSelectedTextColor="@color/white"
         app:tabIndicatorColor="@color/white"
-        android:backgroundTint="#075e54"
+        android:backgroundTint="#474246"
         app:tabIndicatorHeight="3dp"
         android:layout_marginTop="0dp"
         >
@@ -62,6 +62,15 @@
             android:layout_height="wrap_content"
             android:text="@string/status"
             android:id="@+id/status">
+
+        </com.google.android.material.tabs.TabItem>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Room"
+            android:id="@+id/room"
+            tools:ignore="HardcodedText">
 
         </com.google.android.material.tabs.TabItem>
 
