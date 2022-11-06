@@ -8,10 +8,10 @@
 
 
     <ImageView
-        android:contentDescription="@null"
-        android:layout_width="300dp"
+        android:layout_width="400dp"
         android:layout_height="300dp"
         android:layout_centerInParent="true"
+        android:contentDescription="@null"
         android:src="@drawable/tu">
 
     </ImageView>
@@ -31,7 +31,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="EGHAREVBA NOSAKHARE MICHAEL"
+        android:text="TEESSIDE UNIVERSITY CHATTING APP"
         android:layout_alignParentBottom="true"
         android:textSize="18dp"
         android:textStyle="bold"
