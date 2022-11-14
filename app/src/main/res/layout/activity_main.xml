@@ -86,7 +86,7 @@
         android:layout_below="@+id/getphonenumber"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:background="#2B6742"
+        android:background="@color/DarkSlateBlueW3C"
         android:paddingLeft="40dp"
         android:paddingRight="40dp"
         android:text="Sent OTP"

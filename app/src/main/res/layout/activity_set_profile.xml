@@ -14,7 +14,7 @@
         android:text="Save Your Profile"
         android:layout_above="@+id/getuserimage"
         android:layout_marginBottom="30dp"
-        android:textColor="#14502B"
+        android:textColor="#FF2C452D"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
         tools:ignore="HardcodedText">
@@ -57,7 +57,8 @@
         android:autofillHints="name"
         android:hint="@string/enter_your_name_here"
         android:inputType="textCapWords"
-        android:textColorHint="#757575">
+        android:textColor="@color/black"
+        android:textColorHint="#51000000">
 
     </EditText>
 
@@ -70,7 +71,7 @@
         android:textColor="@color/white"
         android:text="save_profile"
         android:layout_marginTop="20dp"
-        android:background="#1A3E1B">
+        android:background="@color/DarkSlateBlueW3C">
 
     </android.widget.Button>
 

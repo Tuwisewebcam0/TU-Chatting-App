@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/profile"
+        android:title="Profile">
+
+    </item>
+
+    <item android:id="@+id/Starred_messages"
+        android:title="Starred messages">
+
+    </item>
+
+    <item android:id="@+id/Privacy"
+        android:title="Privacy">
+
+    </item>
+
+    <item android:title="Settings"
+        android:id="@+id/settings">
+
+
+
+    </item>
+
+
+
+
+</menu>

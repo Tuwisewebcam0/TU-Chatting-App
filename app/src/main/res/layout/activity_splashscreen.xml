@@ -16,17 +16,7 @@
 
     </ImageView>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome to"
-        android:textColor="#113C38"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@+id/maintext"
-        android:layout_marginBottom="5dp"
-        tools:ignore="HardcodedText">
 
-    </TextView>
 
     <TextView
         android:layout_width="wrap_content"

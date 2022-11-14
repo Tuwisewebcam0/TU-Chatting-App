@@ -72,7 +72,7 @@
         android:layout_below="@+id/changenumber"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:background="#085124"
+        android:background="@color/DeepPeriwinkle"
         android:paddingLeft="40dp"
         android:paddingRight="40dp"
         android:text="@string/verify_otp"
