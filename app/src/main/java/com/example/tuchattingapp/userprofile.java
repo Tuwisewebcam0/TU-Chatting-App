@@ -13,6 +13,7 @@ public class userprofile {
         this.userUID = userUID;
     }
 
+
     public String getUsername() {
         return username;
     }

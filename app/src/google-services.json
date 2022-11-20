@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "895560054353",
+    "firebase_url": "https://tuchattingapp-default-rtdb.firebaseio.com",
     "project_id": "tuchattingapp",
     "storage_bucket": "tuchattingapp.appspot.com"
   },
@@ -36,7 +37,7 @@
           "other_platform_oauth_client": [
             {
               "client_id": "895560054353-5tqa1g3tetq2j4uevbnuetfakhsdr100.apps.googleusercontent.com",
-              "client_type": 3
+              "client_type": 6
             }
           ]
         }

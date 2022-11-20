@@ -14,11 +14,9 @@
         android:text="Save Your Profile"
         android:layout_above="@+id/getuserimage"
         android:layout_marginBottom="30dp"
-        android:textColor="#FF2C452D"
+        android:textColor="#292981"
         android:textStyle="bold"
-        android:layout_centerHorizontal="true"
-        tools:ignore="HardcodedText">
-
+        android:layout_centerHorizontal="true">
     </TextView>
 
 
@@ -33,16 +31,13 @@
         app:cardCornerRadius="130dp">
 
         <ImageView
-            android:id="@+id/getuserimageviewinimageview"
-            android:name="READ_EXTERNAL_STORAGE"
+            android:id="@+id/getuserimageinimageview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/profile_pic_avatar"
-            tools:ignore="ImageContrastCheck">
+            android:src="@drawable/profile_pic_avatar">
 
         </ImageView>
-
 
     </androidx.cardview.widget.CardView>
 
@@ -52,13 +47,13 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_centerInParent="true"
-        android:layout_marginLeft="70dp"
-        android:layout_marginRight="70dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginRight="75dp"
         android:autofillHints="name"
-        android:hint="@string/enter_your_name_here"
+        android:hint="Enter Your Profile Name"
         android:inputType="textCapWords"
         android:textColor="@color/black"
-        android:textColorHint="#51000000">
+        android:textColorHint="#757575">
 
     </EditText>
 
@@ -69,7 +64,7 @@
         android:id="@+id/saveProfile"
         android:layout_centerHorizontal="true"
         android:textColor="@color/white"
-        android:text="save_profile"
+        android:text="save profile"
         android:layout_marginTop="20dp"
         android:background="@color/DarkSlateBlueW3C">
 
@@ -85,5 +80,10 @@
         android:layout_marginTop="30dp">
 
     </ProgressBar>
+
+
+
+
+
 
 </RelativeLayout>

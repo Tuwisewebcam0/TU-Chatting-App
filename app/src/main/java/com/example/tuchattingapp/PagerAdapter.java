@@ -38,8 +38,6 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
                 return null;
         }
 
-
-
     }
 
     @Override

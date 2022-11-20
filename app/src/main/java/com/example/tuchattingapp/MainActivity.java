@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
     PhoneAuthProvider.OnVerificationStateChangedCallbacks mcallbacks;
     String codesent;
 

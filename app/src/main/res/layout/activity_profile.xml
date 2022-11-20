@@ -37,7 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Your Profile"
-                android:textSize="20sp"
+                android:textSize="25sp"
                 android:layout_toRightOf="@id/backbuttonofviewprofile"
                 android:id="@+id/myapptext"
                 android:layout_marginLeft="10dp"
@@ -65,27 +65,28 @@
         app:cardCornerRadius="130dp">
 
         <ImageView
-            android:id="@+id/viewuserimageinimageview"
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/profile_pic_avatar">
+            android:src="@drawable/ic_launcher_background"
+            android:id="@+id/viewuserimageinimageview"
+            android:scaleType="centerCrop">
 
         </ImageView>
 
 
     </androidx.cardview.widget.CardView>
-    
-    
+
+
     <ImageView
+        android:id="@+id/logoofviewprofile"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:id="@+id/logoofviewprofile"
-        android:src="@drawable/ic_baseline_person_24"
         android:layout_alignLeft="@+id/viewusername"
+        android:layout_centerInParent="true"
         android:layout_marginLeft="-60dp"
-        app:tint="#716e6e"
-        android:layout_centerInParent="true"/>
+        android:src="@drawable/ic_baseline_person_24"
+        app:tint="#716e6e" />
 
 
     <EditText
@@ -97,23 +98,24 @@
         android:layout_marginRight="90dp"
         android:clickable="false"
         android:enabled="false"
-        android:hint="@string/enter_your_name_here"
+        android:hint="Enter Your Profile Name"
         android:inputType="textCapWords"
         android:textColorHint="#51000000">
 
     </EditText>
 
     <TextView
+        android:id="@+id/movetoupdateprofile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Want To Update Your Profile ?"
-        android:layout_centerInParent="true"
         android:layout_below="@+id/viewusername"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50dp"
         android:paddingLeft="20dp"
+        android:paddingTop="10dp"
         android:paddingRight="20dp"
         android:paddingBottom="10dp"
-        android:paddingTop="10dp"
-        android:id="@+id/movetoupdateprofile"
+        android:text="Update Your Profile"
         android:textColor="#303030">
 
     </TextView>

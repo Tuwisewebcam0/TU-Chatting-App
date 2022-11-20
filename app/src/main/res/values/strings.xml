@@ -13,4 +13,5 @@
     <string name="calls">Calls</string>
     <string name="save_profile">Save Profile</string>
     <string name="imagerequest">ImageRequest</string>
+    <string name="profile">Profile</string>
 </resources>

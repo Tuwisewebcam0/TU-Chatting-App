@@ -17,7 +17,7 @@ import android.widget.Toast;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
-public class chatActivity extends AppCompatActivity {
+public class  chatActivity extends AppCompatActivity {
 
     TabLayout tabLayout;
     TabItem mchat,mstatus,mroom,mcall;
@@ -25,6 +25,7 @@ public class chatActivity extends AppCompatActivity {
     PagerAdapter pagerAdapter;
     androidx.appcompat.widget.Toolbar mtoolbar;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +60,6 @@ public class chatActivity extends AppCompatActivity {
                 }
 
 
-
             }
 
             @Override
@@ -86,6 +86,12 @@ public class chatActivity extends AppCompatActivity {
            case R.id.profile:
                Intent intent=new Intent( chatActivity.this,ProfileActivity.class);
                startActivity(intent);
+               break;
+           case R.id.Starred_messages:
+               Toast.makeText(getApplicationContext(),"starred messages",Toast.LENGTH_SHORT).show();
+               break;
+           case R.id.Privacy:
+               Toast.makeText(getApplicationContext(),"privacy",Toast.LENGTH_SHORT).show();
                break;
            case R.id.settings:
                Toast.makeText(getApplicationContext(),"settings",Toast.LENGTH_SHORT).show();

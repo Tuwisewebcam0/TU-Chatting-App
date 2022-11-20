@@ -67,22 +67,14 @@ public class ProfileActivity extends AppCompatActivity {
 
 
         setSupportActionBar(mtoolbarofviewprofile);
-        mbackbuttonofviewprofile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
+        mbackbuttonofviewprofile.setOnClickListener(view -> finish());
 
 
         storageReference=firebaseStorage.getReference();
-        storageReference.child("Image").child(firebaseAuth.getUid()).child("Profile Pic").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-            @Override
-            public void onSuccess(Uri uri) {
-                ImageURIaccessToken=uri.toString();
-                Picasso.get().load(uri).into(mviewuserimageinimageview);
+        storageReference.child("Image").child(firebaseAuth.getUid()).child("Profile Pic").getDownloadUrl().addOnSuccessListener(uri -> {
+            ImageURIaccessToken=uri.toString();
+            Picasso.get().load(uri).into(mviewuserimageinimageview);
 
-            }
         });
 
         DatabaseReference databaseReference=firebaseDatabase.getReference(firebaseAuth.getUid());
@@ -102,12 +94,9 @@ public class ProfileActivity extends AppCompatActivity {
         });
 
 
-        mmovetoupdateprofile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(ProfileActivity.this,UpdateProfile.class);
-                startActivity(intent);
-            }
+        mmovetoupdateprofile.setOnClickListener(view -> {
+            Intent intent=new Intent(ProfileActivity.this,UpdateProfile.class);
+            startActivity(intent);
         });
 
 
@@ -118,5 +107,13 @@ public class ProfileActivity extends AppCompatActivity {
 
 
 
+    }
+
+    public String getImageURIaccessToken() {
+        return ImageURIaccessToken;
+    }
+
+    public void setImageURIaccessToken(String imageURIaccessToken) {
+        ImageURIaccessToken = imageURIaccessToken;
     }
 }

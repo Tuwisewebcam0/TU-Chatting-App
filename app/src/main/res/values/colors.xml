@@ -19,7 +19,7 @@
     <color name="status_background">#009688</color>
     <color name="colorPrimary">#0b6156</color>
     <color name="colorAccent">#03DAC5</color>
-    <color name="chatbacground">#AAAAAA</color>
+    <color name="chatbackground">#AAAAAA</color>
     <color name="lightGreen">#e5ffcc</color>
     <color name="MarbleBlue">#566D7E</color>
     <color name="settingsIconColor">#0E8374</color>
