@@ -267,4 +267,32 @@ public class UpdateProfile extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
     }
 
+
+    @Override
+    protected void onStop(){
+        super.onStop();
+        DocumentReference documentReference=firebaseFirestore.collection("Users").document(firebaseAuth.getUid());
+        documentReference.update("status", "offline").addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void unused) {
+                Toast.makeText(getApplicationContext(),"Now User is Offline",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+
+    }
+
+    @Override
+    protected void onStart(){
+        super.onStart();
+        DocumentReference documentReference=firebaseFirestore.collection("Users").document(firebaseAuth.getUid());
+        documentReference.update("status", "Online").addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void unused) {
+                Toast.makeText(getApplicationContext(),"Now User is Online",Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
 }
