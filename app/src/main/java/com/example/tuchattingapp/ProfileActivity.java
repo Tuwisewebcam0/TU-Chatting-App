@@ -96,6 +96,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         mmovetoupdateprofile.setOnClickListener(view -> {
             Intent intent=new Intent(ProfileActivity.this,UpdateProfile.class);
+            intent.putExtra("nameofuser",mviewusername.getText().toString());
             startActivity(intent);
         });
 
