@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'com.google.gms.google-services'
+
 }
 
 android {
@@ -15,7 +16,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "android.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -40,6 +41,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:20.1.0'
     implementation 'com.google.firebase:firebase-storage:20.1.0'
     implementation 'com.google.firebase:firebase-firestore:24.4.1'
+    implementation 'com.google.gms:google-services:4.3.14'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
@@ -48,5 +50,21 @@ dependencies {
     implementation 'com.hbb20:ccp:2.6.1'
     //implementation 'com.squareup.picasso:'//
     implementation 'com.squareup.picasso:picasso:2.71828'
+    //Add the Firebaseui:firebase-ui-auth://
+    implementation 'com.firebaseui:firebase-ui-auth:8.0.2'
+
+    implementation 'com.firebaseui:firebase-ui-firestore:7.2.0'
+
+
+
+    dependencies {
+        // Import the BoM for the Firebase platform
+        implementation platform('com.google.firebase:firebase-bom:31.1.0')
+
+        // Add the dependency for the Firebase Authentication library
+        // When using the BoM, you don't specify versions in Firebase library dependencies
+        implementation 'com.google.firebase:firebase-auth'
+    }
+
 
 }

@@ -1,43 +1,35 @@
 {
   "project_info": {
-    "project_number": "895560054353",
-    "firebase_url": "https://tuchattingapp-default-rtdb.firebaseio.com",
-    "project_id": "tuchattingapp",
-    "storage_bucket": "tuchattingapp.appspot.com"
+    "project_number": "433167023800",
+    "firebase_url": "https://tuchattingapp-bb22c-default-rtdb.firebaseio.com",
+    "project_id": "tuchattingapp-bb22c",
+    "storage_bucket": "tuchattingapp-bb22c.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:895560054353:android:41fb0342f7d131867b2a70",
+        "mobilesdk_app_id": "1:433167023800:android:67751745ea9c2f39dffe4d",
         "android_client_info": {
           "package_name": "com.example.tuchattingapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "895560054353-e45h43822hm1dbvedho1gmnc3o3i5ijv.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.tuchattingapp",
-            "certificate_hash": "ce708d6de145270204361b0cce97d6125c30b8e2"
-          }
-        },
-        {
-          "client_id": "895560054353-5tqa1g3tetq2j4uevbnuetfakhsdr100.apps.googleusercontent.com",
+          "client_id": "433167023800-p9g7f3ppepc177rhkiek0cokd24aik7d.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAMPQk66Dct5IJ6kZqKotYUcrlARQOe-t0"
+          "current_key": "AIzaSyARgwA875Qc81jkfM1LmgL1v7XBMPjFg9c"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "895560054353-5tqa1g3tetq2j4uevbnuetfakhsdr100.apps.googleusercontent.com",
-              "client_type": 6
+              "client_id": "433167023800-p9g7f3ppepc177rhkiek0cokd24aik7d.apps.googleusercontent.com",
+              "client_type": 3
             }
           ]
         }

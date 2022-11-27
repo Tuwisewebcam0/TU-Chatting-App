@@ -89,7 +89,7 @@
         android:background="@color/DarkSlateBlueW3C"
         android:paddingLeft="40dp"
         android:paddingRight="40dp"
-        android:text="Sent OTP"
+        android:text="Send OTP"
         android:textColor="@color/white"
         android:textSize="15sp"
         tools:ignore="HardcodedText">
