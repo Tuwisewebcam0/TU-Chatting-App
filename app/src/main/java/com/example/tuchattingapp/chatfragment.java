@@ -1,5 +1,6 @@
 package com.example.tuchattingapp;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -44,7 +45,9 @@ public class chatfragment extends Fragment {
         firebaseFirestore=FirebaseFirestore.getInstance();
         mrecyclerview=v.findViewById(R.id.recylerview);
 
-        Query query=firebaseFirestore.collection("Users");
+        //Query query=firebaseFirestore.collection("Users");
+
+        Query query=firebaseFirestore.collection("Users").whereNotEqualTo("uid",firebaseAuth.getUid());
         FirestoreRecyclerOptions<firebasemodel> allusername=new FirestoreRecyclerOptions.Builder<firebasemodel>().setQuery(query,firebasemodel.class).build();
 
         chatAdapter=new FirestoreRecyclerAdapter<firebasemodel, NoteViewHolder>(allusername) {
@@ -68,14 +71,19 @@ public class chatfragment extends Fragment {
                 noteViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Toast.makeText(getActivity(), "Item is clicked", Toast.LENGTH_SHORT).show();
+                        Intent intent=new Intent(getActivity(),specificchat.class);
+                        intent.putExtra("name",firebasemodel.getName());
+                        intent.putExtra("receiveruid",firebasemodel.getUid());
+                        intent.putExtra("imageuri",firebasemodel.getImage());
+                        startActivity(intent);
+
                     }
                 });
 
 
             }
 
-            @Nullable
+            @NonNull
             @Override
             public NoteViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int ViewType) {
 
