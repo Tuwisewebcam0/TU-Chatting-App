@@ -36,7 +36,7 @@ public class chatfragment extends Fragment {
     RecyclerView mrecyclerview;
 
 
-    @Nullable
+    @NonNull
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v=inflater.inflate(R.layout.chatfragment,container,false);
@@ -68,16 +68,13 @@ public class chatfragment extends Fragment {
                     noteViewHolder.statusofuser.setText(firebasemodel.getStatus());
                 }
 
-                noteViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent intent=new Intent(getActivity(),specificchat.class);
-                        intent.putExtra("name",firebasemodel.getName());
-                        intent.putExtra("receiveruid",firebasemodel.getUid());
-                        intent.putExtra("imageuri",firebasemodel.getImage());
-                        startActivity(intent);
+                noteViewHolder.itemView.setOnClickListener(view -> {
+                    Intent intent=new Intent(getActivity(),specificchat.class);
+                    intent.putExtra("name",firebasemodel.getName());
+                    intent.putExtra("receiveruid",firebasemodel.getUid());
+                    intent.putExtra("imageuri",firebasemodel.getImage());
+                    startActivity(intent);
 
-                    }
                 });
 
 
@@ -110,15 +107,15 @@ public class chatfragment extends Fragment {
     public class NoteViewHolder extends RecyclerView.ViewHolder
     {
 
-        private TextView particularusername;
-        private TextView statusofuser;
+        private final TextView particularusername;
+
+        private final TextView statusofuser;
 
         public NoteViewHolder(@NonNull View itemView) {
             super(itemView);
             particularusername=itemView.findViewById(R.id.nameofuser);
             statusofuser=itemView.findViewById(R.id.userstatus);
             mimageviewofuser=itemView.findViewById(R.id.imageviewofuser);
-
 
 
         }
