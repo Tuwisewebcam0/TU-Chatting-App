@@ -10,10 +10,11 @@
 
 
     <ImageView
-        android:layout_width="408dp"
-        android:layout_height="315dp"
+        android:layout_width="match_parent"
+        android:layout_height="308dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="248dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="218dp"
         android:contentDescription="@null"
         android:src="@drawable/tu">
 
@@ -23,15 +24,14 @@
         android:id="@+id/maintext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerVertical="true"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="669dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="663dp"
+        android:fontFamily="@font/tahomabd"
         android:text="TEESSIDE UNIVERSITY MIDDLESBROUGH UK"
         android:textColor="#055C54"
-        android:textSize="18sp"
+        android:textSize="15sp"
         android:textStyle="bold"
         tools:ignore="HardcodedText">
 
@@ -47,6 +47,7 @@
         android:textColor="#055C54"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:fontFamily="@font/tahomabd"
         tools:ignore="HardcodedText">
 
     </TextView>

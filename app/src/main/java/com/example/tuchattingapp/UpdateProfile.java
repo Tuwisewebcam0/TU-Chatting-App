@@ -38,6 +38,7 @@ public class UpdateProfile extends AppCompatActivity {
 
     private EditText mnewusername;
     private FirebaseAuth firebaseAuth;
+
     private FirebaseDatabase firebaseDatabase;
 
     private FirebaseFirestore firebaseFirestore;
@@ -90,12 +91,7 @@ public class UpdateProfile extends AppCompatActivity {
 
         setSupportActionBar(mtoolbarofupdateprofile);
 
-        mbackbuttonofupdateprofile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
+        mbackbuttonofupdateprofile.setOnClickListener(view -> finish());
 
 
         mnewusername.setText(intent.getStringExtra("nameofuser"));
@@ -103,43 +99,41 @@ public class UpdateProfile extends AppCompatActivity {
 
         DatabaseReference databaseReference=firebaseDatabase.getReference(firebaseAuth.getUid());
 
-        mupdateprofilebutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        mupdateprofilebutton.setOnClickListener(view -> {
 
-                newname=mnewusername.getText().toString();
-                if(newname.isEmpty())
-                {
-                    Toast.makeText(getApplicationContext(),"Name is Empty", Toast.LENGTH_SHORT).show();
-                }
-                else if(imagepath!=null)
-                {
-                    mprogressbarofupdateprofile.setVisibility(View.VISIBLE);
-                    userprofile muserprofile = new userprofile(newname,firebaseAuth.getUid());
-                    databaseReference.setValue(muserprofile);
+            newname=mnewusername.getText().toString();
+            if(newname.isEmpty())
+            {
+                Toast.makeText(getApplicationContext(),"Name is Empty", Toast.LENGTH_SHORT).show();
+            }
+            else if(imagepath!=null)
+            {
+                mprogressbarofupdateprofile.setVisibility(View.VISIBLE);
+                userprofile muserprofile = new userprofile(newname,firebaseAuth.getUid());
+                databaseReference.setValue(muserprofile);
 
-                    updateimageStorage();
+                updateimageStorage();
 
-                    Toast.makeText(getApplicationContext(), "Updated",Toast.LENGTH_SHORT).show();
-                    mprogressbarofupdateprofile.setVisibility(View.VISIBLE);
-                    Intent intent=new Intent(UpdateProfile.this,chatActivity.class);
-                    startActivity(intent);
-                    finish();
+                Toast.makeText(getApplicationContext(), "Updated",Toast.LENGTH_SHORT).show();
+                mprogressbarofupdateprofile.setVisibility(View.VISIBLE);
+                Intent intent=new Intent(UpdateProfile.this,chatActivity.class);
+                startActivity(intent);
+                finish();
 
 
-                }
-                else
-                {
-                    mprogressbarofupdateprofile.setVisibility(View.VISIBLE);
-                    userprofile muserprofile = new userprofile(newname,firebaseAuth.getUid());
-                    databaseReference.setValue(muserprofile);
-                    updatenameoncloudfirestore();
-                    Toast.makeText(getApplicationContext(),"Updated",Toast.LENGTH_SHORT).show();
+            }
+            else
+            {
+                mprogressbarofupdateprofile.setVisibility(View.VISIBLE);
+                userprofile muserprofile = new userprofile(newname,firebaseAuth.getUid());
+                databaseReference.setValue(muserprofile);
+                updatenameoncloudfirestore();
+                Toast.makeText(getApplicationContext(),"Updated",Toast.LENGTH_SHORT).show();
 
-                    mprogressbarofupdateprofile.setVisibility(View.VISIBLE);
-                    Intent intent=new Intent(UpdateProfile.this,chatActivity.class);
-                    startActivity(intent);
-                    finish();
+                mprogressbarofupdateprofile.setVisibility(View.VISIBLE);
+                Intent intent=new Intent(UpdateProfile.this,chatActivity.class);
+                startActivity(intent);
+                finish();
 
 
 
@@ -149,26 +143,19 @@ public class UpdateProfile extends AppCompatActivity {
 
 
 
-                }
             }
         });
 
 
-        mgetnewuserimageinimageview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
-                startActivityForResult(intent, PICK_IMAGE);
-            }
+        mgetnewuserimageinimageview.setOnClickListener(view -> {
+            Intent intent=new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
+            startActivityForResult(intent, PICK_IMAGE);
         });
 
         storageReference=firebaseStorage.getReference();
-        storageReference.child("Image").child(firebaseAuth.getUid()).child("Profile Pic").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-            @Override
-            public void onSuccess(Uri uri) {
-                ImageURIaccessToken=uri.toString();
-                Picasso.get().load(uri).into(mgetnewuserimageinimageview);
-            }
+        storageReference.child("Image").child(firebaseAuth.getUid()).child("Profile Pic").getDownloadUrl().addOnSuccessListener(uri -> {
+            ImageURIaccessToken=uri.toString();
+            Picasso.get().load(uri).into(mgetnewuserimageinimageview);
         });
 
 
@@ -186,13 +173,7 @@ public class UpdateProfile extends AppCompatActivity {
 
 
 
-        documentReference.set(userdata).addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void unused) {
-                Toast.makeText(getApplicationContext(),"Profile Updated Successfully",Toast.LENGTH_SHORT).show();
-
-            }
-        });
+        documentReference.set(userdata).addOnSuccessListener(unused -> Toast.makeText(getApplicationContext(),"Profile Updated Successfully",Toast.LENGTH_SHORT).show());
 
 
 
@@ -221,32 +202,16 @@ public class UpdateProfile extends AppCompatActivity {
 
         UploadTask uploadTask=imageref.putBytes(data);
 
-        uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-            @Override
-            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+        uploadTask.addOnSuccessListener(taskSnapshot -> {
 
-                imageref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                    @Override
-                    public void onSuccess(Uri uri) {
-                        ImageURIaccessToken=uri.toString();
-                        Toast.makeText(getApplicationContext(),"URI get success",Toast.LENGTH_SHORT).show();
-                        updatenameoncloudfirestore();
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(getApplicationContext(),"URI get Failed",Toast.LENGTH_SHORT).show();
-                    }
-                });
-                Toast.makeText(getApplicationContext(),"Image is Updated",Toast.LENGTH_SHORT).show();
+            imageref.getDownloadUrl().addOnSuccessListener(uri -> {
+                ImageURIaccessToken=uri.toString();
+                Toast.makeText(getApplicationContext(),"URI get success",Toast.LENGTH_SHORT).show();
+                updatenameoncloudfirestore();
+            }).addOnFailureListener(e -> Toast.makeText(getApplicationContext(),"URI get Failed",Toast.LENGTH_SHORT).show());
+            Toast.makeText(getApplicationContext(),"Image is Updated",Toast.LENGTH_SHORT).show();
 
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(getApplicationContext(), "Image Not Updated", Toast.LENGTH_SHORT).show();
-            }
-        });
+        }).addOnFailureListener(e -> Toast.makeText(getApplicationContext(), "Image Not Updated", Toast.LENGTH_SHORT).show());
 
 
 
@@ -272,12 +237,7 @@ public class UpdateProfile extends AppCompatActivity {
     protected void onStop(){
         super.onStop();
         DocumentReference documentReference=firebaseFirestore.collection("Users").document(firebaseAuth.getUid());
-        documentReference.update("status", "offline").addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void unused) {
-                Toast.makeText(getApplicationContext(),"Now User is Offline",Toast.LENGTH_SHORT).show();
-            }
-        });
+        documentReference.update("status", "offline").addOnSuccessListener(unused -> Toast.makeText(getApplicationContext(),"User is Offline",Toast.LENGTH_SHORT).show());
 
 
 
@@ -289,8 +249,8 @@ public class UpdateProfile extends AppCompatActivity {
         DocumentReference documentReference=firebaseFirestore.collection("Users").document(firebaseAuth.getUid());
         documentReference.update("status", "Online").addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
-            public void onSuccess(Void unused) {
-                Toast.makeText(getApplicationContext(),"Now User is Online",Toast.LENGTH_SHORT).show();
+            public void onSuccess(Void aVoid) {
+                Toast.makeText(getApplicationContext(),"User is Online",Toast.LENGTH_SHORT).show();
             }
         });
     }

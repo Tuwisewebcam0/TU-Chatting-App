@@ -14,4 +14,6 @@
     <string name="save_profile">Save Profile</string>
     <string name="imagerequest">ImageRequest</string>
     <string name="profile">Profile</string>
+    <string name="update_your_profile">Update Your Profile</string>
+    <string name="update_profile">Update Profile</string>
 </resources>

@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_marginTop="0dp"
-        android:background="#C1B46E"
+        android:background="#D36505"
         android:id="@+id/toolbar">
 
         <RelativeLayout
@@ -27,7 +27,7 @@
                 android:textSize="20sp"
                 android:id="@+id/myapptext"
                 android:textStyle="bold"
-                android:textColor="#2C452D">
+                android:textColor="@color/white">
 
             </TextView>
 
@@ -41,10 +41,10 @@
         android:layout_height="?attr/actionBarSize"
         android:id="@+id/include"
         android:layout_below="@+id/toolbar"
-        app:tabTextColor="@color/chat_background"
-        app:tabSelectedTextColor="@color/chat_background"
+        app:tabTextColor="@color/BlackCat"
+        app:tabSelectedTextColor="@color/BlackCat"
         app:tabIndicatorColor="#552828"
-        android:backgroundTint="#F4ECBF"
+        android:backgroundTint="@color/FloralWhite"
         app:tabIndicatorHeight="3dp"
         android:layout_marginTop="0dp"
         >
