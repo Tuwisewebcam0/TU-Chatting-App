@@ -1,5 +1,6 @@
 package com.example.tuchattingapp;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -88,13 +89,7 @@ public class specificchat extends AppCompatActivity {
         intent=getIntent();
 
         setSupportActionBar(mtoolbarofspecificchat);
-        mtoolbarofspecificchat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"Toolbar is Clicked",Toast.LENGTH_SHORT).show();
-
-            }
-        });
+        mtoolbarofspecificchat.setOnClickListener(view -> Toast.makeText(getApplicationContext(),"Toolbar is Clicked",Toast.LENGTH_SHORT).show());
 
         firebaseAuth=FirebaseAuth.getInstance();
         firebaseDatabase=FirebaseDatabase.getInstance();
@@ -113,7 +108,7 @@ public class specificchat extends AppCompatActivity {
 
 
 
-        DatabaseReference databaseReference=firebaseDatabase.getReference().child("chats").child(senderroom).child("message");
+        DatabaseReference databaseReference=firebaseDatabase.getReference().child("chats").child(senderroom).child("messages");
         messagesAdapter=new MessagesAdapter(specificchat.this,messagesArrayList);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -132,9 +127,6 @@ public class specificchat extends AppCompatActivity {
 
             }
         });
-
-
-
 
 
 
@@ -157,46 +149,35 @@ public class specificchat extends AppCompatActivity {
         }
 
 
-        msendmessagebutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                enteredmessage=mgetmessage.getText().toString();
-                if(enteredmessage.isEmpty())
-                {
-                    Toast.makeText(getApplicationContext(),"Enter message first",Toast.LENGTH_SHORT).show();
-                }
+        msendmessagebutton.setOnClickListener(view -> {
+            enteredmessage=mgetmessage.getText().toString();
+            if(enteredmessage.isEmpty())
+            {
+                Toast.makeText(getApplicationContext(),"Enter message first",Toast.LENGTH_SHORT).show();
+            }
 
-                else
+            else
 
-                {
-                    Date date=new Date();
-                    currenttime=simpleDateFormat.format(calendar.getTime());
-                    Messages messages=new Messages(enteredmessage,firebaseAuth.getUid(),date.getTime(),currenttime);
-                    firebaseDatabase=FirebaseDatabase.getInstance();
-                    firebaseDatabase.getReference().child("chats")
-                            .child(senderroom)
-                            .child("messages")
-                            .push().setValue(messages).addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            firebaseDatabase.getReference()
-                                    .child("chats")
-                                    .child(receiverroom)
-                                    .child("messages")
-                                    .push()
-                                    .setValue(messages).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
+            {
+                Date date=new Date();
+                currenttime=simpleDateFormat.format(calendar.getTime());
+                Messages messages=new Messages(enteredmessage,firebaseAuth.getUid(),date.getTime(),currenttime);
+                firebaseDatabase=FirebaseDatabase.getInstance();
+                firebaseDatabase.getReference().child("chats")
+                        .child(senderroom)
+                        .child("messages")
+                        .push().setValue(messages).addOnCompleteListener(task -> firebaseDatabase.getReference()
+                                .child("chats")
+                                .child(receiverroom)
+                                .child("messages")
+                                .push()
+                                .setValue(messages).addOnCompleteListener(task1 -> {
 
-                                }
-                            });
-                        }
-                    });
+                                }));
 
-                    mgetmessage.setText(null);
+                mgetmessage.setText(null);
 
 
-                }
             }
         });
 

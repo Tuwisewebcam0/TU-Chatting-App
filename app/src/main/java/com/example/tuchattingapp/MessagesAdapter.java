@@ -36,7 +36,7 @@ public class MessagesAdapter extends RecyclerView.Adapter {
         }
         else
         {
-            View view= LayoutInflater.from(context).inflate(R.layout.senderchatlayout,parent,false);
+            View view= LayoutInflater.from(context).inflate(R.layout.receiverchatlayout,parent,false);
             return new ReceiverViewHolder(view);
         }
     }

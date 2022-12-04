@@ -16,4 +16,6 @@
     <string name="profile">Profile</string>
     <string name="update_your_profile">Update Your Profile</string>
     <string name="update_profile">Update Profile</string>
+    <string name="display_status_here">Display Status Here</string>
+    <string name="display_profile_name_here">Display Profile Name Here</string>
 </resources>

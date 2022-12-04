@@ -25,15 +25,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="50dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="663dp"
         android:fontFamily="@font/tahomabd"
         android:text="TEESSIDE UNIVERSITY MIDDLESBROUGH UK"
         android:textColor="#055C54"
-        android:textSize="15sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         tools:ignore="HardcodedText">
+
 
     </TextView>
 
