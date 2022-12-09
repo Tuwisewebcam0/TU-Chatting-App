@@ -1,34 +1,41 @@
 {
   "project_info": {
-    "project_number": "433167023800",
-    "firebase_url": "https://tuchattingapp-bb22c-default-rtdb.firebaseio.com",
-    "project_id": "tuchattingapp-bb22c",
-    "storage_bucket": "tuchattingapp-bb22c.appspot.com"
+    "project_number": "93915960359",
+    "project_id": "tu-chatting-app",
+    "storage_bucket": "tu-chatting-app.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:433167023800:android:67751745ea9c2f39dffe4d",
+        "mobilesdk_app_id": "1:93915960359:android:134b250285ceef24e42a02",
         "android_client_info": {
-          "package_name": "com.example.tuchattingapp"
+          "package_name": "uk.ac.tess.b1724525.tuchattingapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "433167023800-p9g7f3ppepc177rhkiek0cokd24aik7d.apps.googleusercontent.com",
+          "client_id": "93915960359-9mcmkhoqr07imvefv40g5no3tdfor2vp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "uk.ac.tess.b1724525.tuchattingapp",
+            "certificate_hash": "ce708d6de145270204361b0cce97d6125c30b8e2"
+          }
+        },
+        {
+          "client_id": "93915960359-1kcsc8di0tlq1hve2tk68piov05gdu6a.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyARgwA875Qc81jkfM1LmgL1v7XBMPjFg9c"
+          "current_key": "AIzaSyB76NlIy-AUPbRlFxF4vG54Xyp9GY9Ikqo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "433167023800-p9g7f3ppepc177rhkiek0cokd24aik7d.apps.googleusercontent.com",
+              "client_id": "93915960359-1kcsc8di0tlq1hve2tk68piov05gdu6a.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

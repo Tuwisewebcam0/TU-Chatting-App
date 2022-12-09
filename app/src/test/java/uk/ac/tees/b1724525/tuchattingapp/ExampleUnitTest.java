@@ -1,4 +1,4 @@
-package com.example.tuchattingapp;
+package uk.ac.tees.b1724525.tuchattingapp;
 
 import org.junit.Test;
 
