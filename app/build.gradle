@@ -58,5 +58,6 @@ dependencies {
     implementation 'com.hbb20:ccp:2.6.1'
     //implementation 'com.squareup.picasso:'//
     implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation'com.github.dcendents:android-maven-gradle-plugin:2.1'
 
 }

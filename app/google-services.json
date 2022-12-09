@@ -1,26 +1,19 @@
 {
   "project_info": {
     "project_number": "93915960359",
+    "firebase_url": "https://tu-chatting-app-default-rtdb.firebaseio.com",
     "project_id": "tu-chatting-app",
     "storage_bucket": "tu-chatting-app.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:93915960359:android:134b250285ceef24e42a02",
+        "mobilesdk_app_id": "1:93915960359:android:6006a4b7c69e1d18e42a02",
         "android_client_info": {
-          "package_name": "uk.ac.tess.b1724525.tuchattingapp"
+          "package_name": "uk.ac.tees.b1724525.tuchattingapp"
         }
       },
       "oauth_client": [
-        {
-          "client_id": "93915960359-9mcmkhoqr07imvefv40g5no3tdfor2vp.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "uk.ac.tess.b1724525.tuchattingapp",
-            "certificate_hash": "ce708d6de145270204361b0cce97d6125c30b8e2"
-          }
-        },
         {
           "client_id": "93915960359-1kcsc8di0tlq1hve2tk68piov05gdu6a.apps.googleusercontent.com",
           "client_type": 3
