@@ -14,9 +14,9 @@
             android:id="@+id/calls"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#FF921D"
             android:padding="12dp"
-            android:text="@string/tu_chatting_app"
+            android:text="Call History"
+            android:background="#2196F3"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold">
