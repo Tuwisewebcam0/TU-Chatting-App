@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="25sp"
-        android:text="Save Your Profile"
+        android:text="@string/save_your_profile"
         android:layout_above="@+id/getuserimage"
         android:layout_marginBottom="30dp"
         android:textColor="#D36505"
@@ -51,7 +51,7 @@
         android:layout_marginLeft="75dp"
         android:layout_marginRight="75dp"
         android:autofillHints="name"
-        android:hint="Enter Your Profile Name"
+        android:hint="@string/enter_your_profile_name"
         android:inputType="textCapWords"
         android:textColor="@color/black"
         android:textColorHint="#757575">

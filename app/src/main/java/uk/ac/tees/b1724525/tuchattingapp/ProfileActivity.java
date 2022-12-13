@@ -70,7 +70,7 @@ public class ProfileActivity extends AppCompatActivity {
 
 
         storageReference=firebaseStorage.getReference();
-        storageReference.child("Image").child(firebaseAuth.getUid()).child("Profile Pic").getDownloadUrl().addOnSuccessListener(uri -> {
+        storageReference.child("Images").child(firebaseAuth.getUid()).child("Profile Pic").getDownloadUrl().addOnSuccessListener(uri -> {
             ImageURIaccessToken=uri.toString();
             Picasso.get().load(uri).into(mviewuserimageinimageview);
 

@@ -18,4 +18,6 @@
     <string name="update_profile">Update Profile</string>
     <string name="display_status_here">Display Status Here</string>
     <string name="display_profile_name_here">Display Profile Name Here</string>
+    <string name="enter_your_profile_name">Enter Your Profile Name</string>
+    <string name="save_your_profile">Save Your Profile</string>
 </resources>

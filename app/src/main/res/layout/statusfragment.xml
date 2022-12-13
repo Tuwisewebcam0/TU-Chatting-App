@@ -1,22 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D6BAF8">
+    android:background="@color/FloralWhite">
 
-    <TextView
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/Status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#CA9F7A"
+            android:padding="12dp"
+            android:text="My Status"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText">
+
+        </TextView>
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Status"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        android:textColor="@color/white"
-        android:layout_centerInParent="true"
-        tools:ignore="HardcodedText">
-
-    </TextView>
-
-
-</RelativeLayout>
+        android:layout_gravity='bottom|end'
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:contentDescription="camera"
+        android:focusable="true"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/baseline_photo_camera_black_24dp"
+        tools:ignore="ContentDescription" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

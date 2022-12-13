@@ -17,7 +17,7 @@ import uk.ac.tees.b1724525.tuchattingapp.R;
 
 public class callFragment extends Fragment {
 
-    String phone = "111-111-1111";
+    String phone = "1111-111-111";
 
     @SuppressLint("InflateParams")
     @Nullable

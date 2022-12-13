@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     ProgressBar mprogressbarofmain;
 
-    PhoneAuthProvider.OnVerificationStateChangedCallbacks mcallbacks;
+    PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
     String codesent;
 
     @Override
@@ -74,9 +74,9 @@ public class MainActivity extends AppCompatActivity {
 
                     PhoneAuthOptions options = PhoneAuthOptions.newBuilder(firebaseAuth)
                             .setPhoneNumber(phonenumber)                    //phone number to verify
-                            .setTimeout(120L, TimeUnit.SECONDS)      //Timeout and unit
+                            .setTimeout(60L, TimeUnit.SECONDS)      //Timeout and unit
                             .setActivity(MainActivity.this)                //Activity(for callback binding)
-                            .setCallbacks(mcallbacks)                      //onVerificationStateChangedCallbacks
+                            .setCallbacks(mCallbacks)                      //onVerificationStateChangedCallbacks
                             .build();
 
                     PhoneAuthProvider.verifyPhoneNumber(options);
@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        mcallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+        mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
             @Override
             public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
                 //how to automatically fetch code here

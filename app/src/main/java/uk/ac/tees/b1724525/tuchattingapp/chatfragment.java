@@ -25,9 +25,7 @@ import com.squareup.picasso.Picasso;
 
 public class chatfragment extends Fragment {
 
-    private FirebaseFirestore firebaseFirestore;
     LinearLayoutManager linearLayoutManager;
-    private FirebaseAuth firebaseAuth;
 
     ImageView mimageviewofuser;
 
@@ -41,15 +39,15 @@ public class chatfragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v=inflater.inflate(R.layout.chatfragment,container,false);
 
-        firebaseAuth=FirebaseAuth.getInstance();
-        firebaseFirestore=FirebaseFirestore.getInstance();
+        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+        FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
         mrecyclerview=v.findViewById(R.id.recylerview);
 
         //Query query=firebaseFirestore.collection("Users"); (by default it fetches all users)
 
 
         //how to fetch all users in the firestore database except me//
-        Query query=firebaseFirestore.collection("Users").whereNotEqualTo("uid",firebaseAuth.getUid());
+        Query query= firebaseFirestore.collection("Users").whereNotEqualTo("uid", firebaseAuth.getUid());
         FirestoreRecyclerOptions<firebasemodel> allusername=new FirestoreRecyclerOptions.Builder<firebasemodel>().setQuery(query,firebasemodel.class).build();
 
         chatAdapter=new FirestoreRecyclerAdapter<firebasemodel, NoteViewHolder>(allusername) {
@@ -110,9 +108,9 @@ public class chatfragment extends Fragment {
     public class NoteViewHolder extends RecyclerView.ViewHolder
     {
 
-        private TextView particularusername;
+        private final TextView particularusername;
 
-        private TextView statusofuser;
+        private final TextView statusofuser;
 
         public NoteViewHolder(@NonNull View itemView) {
             super(itemView);

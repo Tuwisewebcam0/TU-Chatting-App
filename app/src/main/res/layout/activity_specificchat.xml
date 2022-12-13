@@ -55,16 +55,16 @@
 
 
             <TextView
+                android:id="@+id/nameofspecificuser"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Name of User"
-                android:textSize="25sp"
-                android:layout_toRightOf="@id/cardviewofspecificuser"
-                android:id="@+id/nameofspecificuser"
-                android:layout_marginLeft="10dp"
                 android:layout_centerVertical="true"
-                android:textStyle="bold"
-                android:textColor="@color/FloralWhite">
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/cardviewofspecificuser"
+                android:text="Name of User"
+                android:textColor="@color/FloralWhite"
+                android:textSize="25sp"
+                android:textStyle="bold">
 
             </TextView>
 
@@ -136,14 +136,6 @@
 
 
     </androidx.cardview.widget.CardView>
-
-
-
-
-
-
-
-
 
 
 
