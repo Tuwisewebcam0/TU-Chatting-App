@@ -30,7 +30,7 @@ import uk.ac.tees.b1724525.tuchattingapp.R;
 public class  chatActivity extends AppCompatActivity {
 
     TabLayout tabLayout;
-    TabItem mchat,mstatus,mcommunity,mcall;
+    TabItem mchat,mstatus,mroom,mcall;
     ViewPager viewPager;
     PagerAdapter pagerAdapter;
     androidx.appcompat.widget.Toolbar mtoolbar;
@@ -48,7 +48,7 @@ public class  chatActivity extends AppCompatActivity {
         tabLayout=findViewById(id.include);
         mchat=findViewById(id.chat);
         mstatus=findViewById(id.status);
-        mcommunity=findViewById(id.room);
+        mroom=findViewById(id.room);
         mcall=findViewById(id.calls);
         viewPager=findViewById(id.fragment_container);
 
@@ -59,7 +59,7 @@ public class  chatActivity extends AppCompatActivity {
         setSupportActionBar(mtoolbar);
 
 
-        Drawable drawable= ContextCompat.getDrawable(getApplicationContext(),R.drawable.ic_baseline_more_vert_24);
+        Drawable drawable= ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_baseline_more_vert_24);
         mtoolbar.setOverflowIcon(drawable);
 
 
@@ -102,9 +102,6 @@ public class  chatActivity extends AppCompatActivity {
            case id.profile:
                Intent intent=new Intent( chatActivity.this,ProfileActivity.class);
                startActivity(intent);
-               break;
-           case id.Starred_messages:
-               Toast.makeText(getApplicationContext(),"starred messages",Toast.LENGTH_SHORT).show();
                break;
            case id.Privacy:
                Toast.makeText(getApplicationContext(),"privacy",Toast.LENGTH_SHORT).show();

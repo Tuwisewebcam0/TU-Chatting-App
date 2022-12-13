@@ -6,10 +6,6 @@
 
     </item>
 
-    <item android:id="@+id/Starred_messages"
-        android:title="Starred messages">
-
-    </item>
 
     <item android:id="@+id/Privacy"
         android:title="Privacy">

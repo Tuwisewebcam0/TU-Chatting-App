@@ -14,15 +14,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import kotlin.contracts.Returns;
 
 
 public class statusfragment extends Fragment {
 
-    private ImageView imageview;
-    private static int PICK_IMAGE=123;
-    private Uri imagepath;
 
     @SuppressLint("InflateParams")
     @Nullable
@@ -30,9 +30,6 @@ public class statusfragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.statusfragment, container, false);
 
-        FloatingActionButton mFab = view.findViewById(R.id.floatingActionButton);
-        String camera;
-        mFab.setOnClickListener(view1 -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(MediaStore.Images.Media.BUCKET_DISPLAY_NAME ))));
-        return view;
+    return null;
     }
 }

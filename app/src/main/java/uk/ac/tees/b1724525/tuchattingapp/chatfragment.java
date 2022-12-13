@@ -47,7 +47,7 @@ public class chatfragment extends Fragment {
 
 
         //how to fetch all users in the firestore database except me//
-        Query query= firebaseFirestore.collection("Users").whereNotEqualTo("uid", firebaseAuth.getUid());
+        Query query= firebaseFirestore.collection("Users").whereNotEqualTo("Uid", firebaseAuth.getUid());
         FirestoreRecyclerOptions<firebasemodel> allusername=new FirestoreRecyclerOptions.Builder<firebasemodel>().setQuery(query,firebasemodel.class).build();
 
         chatAdapter=new FirestoreRecyclerAdapter<firebasemodel, NoteViewHolder>(allusername) {

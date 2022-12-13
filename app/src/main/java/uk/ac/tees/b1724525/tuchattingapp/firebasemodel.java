@@ -6,6 +6,7 @@ public class firebasemodel {
     String image;
     String uid;
     String status;
+    
 
     //parameters constructors//
     public firebasemodel(String name, String image, String uid, String status) {

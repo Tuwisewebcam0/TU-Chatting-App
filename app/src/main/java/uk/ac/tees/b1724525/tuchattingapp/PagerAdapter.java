@@ -27,7 +27,7 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
                 return new statusfragment();
 
             case 2:
-                return new communityfragment();
+                return new roomfragment();
 
 
             case 3:
